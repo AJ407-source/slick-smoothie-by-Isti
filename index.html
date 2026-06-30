@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Smoothies</title>
+    <!-- Tailwind CSS for absolute pixel control -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts for fun, clean typography matching the sketch vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Quicksand', sans-serif; }
+        h1, h2, h3 { font-family: 'Fredoka', sans-serif; }
+    </style>
+</head>
+<body class="bg-amber-50/30 text-stone-800 min-h-screen flex flex-col justify-between">
+
+    <!-- 1. Header / Navigation -->
+    <header class="w-full max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo Area mirroring the blue label from image.png -->
+        <div class="bg-sky-400 text-white font-bold px-4 py-2 rounded-full shadow-sm text-lg tracking-wide transform -rotate-2">
+            Slick Smoothies
+        </div>
+        <nav class="hidden sm:flex space-x-6 font-semibold text-stone-600">
+            <a href="#" class="hover:text-sky-500 transition">Menu</a>
+            <a href="#" class="hover:text-sky-500 transition">About Us</a>
+            <a href="#" class="hover:text-sky-500 transition">Cart</a>
+        </nav>
+        <!-- Mobile Menu Icon (Burger) -->
+        <button class="sm:hidden text-stone-700 p-2 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </header>
+
+    <!-- 2. Hero Section (Top of Page) -->
+    <section class="max-w-4xl mx-auto text-center px-6 pt-8 pb-12">
+        <h1 class="text-4xl sm:text-6xl font-bold text-emerald-600 tracking-tight leading-tight mb-2">
+            Slick Smoothies <span class="text-amber-700 block sm:inline">all the way!</span>
+        </h1>
+        <p class="text-base sm:text-xl text-stone-600 max-w-2xl mx-auto font-medium mb-8">
+            Packed with real fruit, zero nonsense, and maximum flavor. Find your blend today!
+        </p>
+        <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold text-lg px-8 py-3 rounded-full shadow-md transition-all transform hover:scale-105 active:scale-95 cursor-pointer">
+            Order Yours Now
+        </button>
+    </section>
+
+    <!-- 3. Product Showcase Grid (Responsive Layout) -->
+    <main class="max-w-6xl mx-auto px-6 pb-24 w-full">
+        <!-- 
+          The magic happens below: 
+          - grid-cols-1: stacks items vertically on small mobile screens
+          - md:grid-cols-3: automatically snaps into your 3-column layout on desktops/tablets
+        -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            
+            <!-- Card 1: Kiwini (Green) -->
+            <div class="bg-white rounded-3xl p-6 shadow-md border-2 border-emerald-100 flex flex-col justify-between transform transition hover:-translate-y-1 hover:shadow-lg">
+                <div>
+                    <!-- Image Placeholder -->
+                     
+                    <div class="w-full aspect-square bg-emerald-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden border border-emerald-100">
+                        <img src="kiwini.png" alt="Kiwini Smoothie" class="w-full h-full object-cover onerror-fallback" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="hidden flex-col items-center text-emerald-400 font-semibold p-4 text-center">
+                            <span class="text-4xl mb-2">🥝</span> <img src="Kiwini_smoothie.jpg" alt="Kiwini">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-600 mb-3">Kiwini</h3>
+                    <ul class="space-y-2 text-stone-600 font-medium pl-1">
+                        <li class="flex items-center"><span class="text-emerald-500 mr-2">•</span> 2 Kiwis</li>
+                        <li class="flex items-center"><span class="text-emerald-500 mr-2">•</span> 1 Avocado</li>
+                        <li class="flex items-center"><span class="text-emerald-500 mr-2">•</span> A pot of Fage yogurt</li>
+                        <li class="flex items-center"><span class="text-emerald-500 mr-2">•</span>Jellybeans</li>
+                        
+                    </ul>
+                </div>
+                <button class="mt-8 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl transition cursor-pointer">Add to Order</button>
+            </div>
+
+            <!-- Card 2: Bananialist (Yellow) -->
+            <div class="bg-white rounded-3xl p-6 shadow-md border-2 border-amber-100 flex flex-col justify-between transform transition hover:-translate-y-1 hover:shadow-lg">
+                <div>
+                    <!-- Image Placeholder -->
+                    <div class="w-full aspect-square bg-amber-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden border border-amber-100">
+                        <img src="bananalist.png" alt="Bananalist Smoothie" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="hidden flex-col items-center text-amber-500 font-semibold p-4 text-center">
+                            <span class="text-4xl mb-2">🍌</span> <img src="bananalist_smoothie.jpg" alt="Bananalist">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-amber-500 mb-3">Bananalist</h3>
+                    <ul class="space-y-2 text-stone-600 font-medium pl-1">
+                        <li class="flex items-center"><span class="text-amber-500 mr-2">•</span> 3 Mangoes</li>
+                        <li class="flex items-center"><span class="text-amber-500 mr-2">•</span> 2 Bananas</li>
+                        <li class="flex items-center"><span class="text-amber-500 mr-2">•</span> 3 Pineapples</li>
+                        <li class="flex items-center"><span class="text-amber-500 mr-2">•</span> A pot of Fage yogurt</li>
+                        <li class="flex items-center"><span class="text-amber-500 mr-2">•</span> Jellybeans</li>
+                    </ul>
+                </div>
+                <button class="mt-8 w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2.5 rounded-xl transition cursor-pointer">Add to Order</button>
+            </div>
+
+            <!-- Card 3: Strawras (Red) -->
+            <div class="bg-white rounded-3xl p-6 shadow-md border-2 border-rose-100 flex flex-col justify-between transform transition hover:-translate-y-1 hover:shadow-lg">
+                <div>
+                    <!-- Image Placeholder -->
+                    <div class="w-full aspect-square bg-rose-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden border border-rose-100">
+                        <img src="strawras.png" alt="Strawras Smoothie" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="hidden flex-col items-center text-rose-400 font-semibold p-4 text-center">
+                            <span class="text-4xl mb-2">🍓</span> <img src="Strawras_smoothie.jpg" alt="Strawras">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-rose-500 mb-3">Strawras</h3>
+                    <ul class="space-y-2 text-stone-600 font-medium pl-1">
+                        <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> 3 Strawberries</li>
+                        <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> 2 Raspberries</li>
+                        <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> A pot of Fage yogurt</li>
+                        <li class="flex items-center"><span class="text-rose-500 mr-2">•</span>Jellybeans</li>
+                    </ul>
+                </div>
+                <button class="mt-8 w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-2.5 rounded-xl transition cursor-pointer">Add to Order</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 4. Footer -->
+    <footer class="w-full border-t border-stone-200 bg-white/80 py-6 text-center text-stone-500 text-sm font-medium">
+        &copy; 2026 Slick Smoothies. All rights reserved.
+    </footer>
+
+</body>
+</html>
