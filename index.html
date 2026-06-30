@@ -49,18 +49,12 @@
 
     <!-- 3. Product Showcase Grid (Responsive Layout) -->
     <main class="max-w-6xl mx-auto px-6 pb-24 w-full">
-        <!-- 
-          The magic happens below: 
-          - grid-cols-1: stacks items vertically on small mobile screens
-          - md:grid-cols-3: automatically snaps into your 3-column layout on desktops/tablets
-        -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             
             <!-- Card 1: Kiwini (Green) -->
             <div class="bg-white rounded-3xl p-6 shadow-md border-2 border-emerald-100 flex flex-col justify-between transform transition hover:-translate-y-1 hover:shadow-lg">
                 <div>
                     <!-- Image Placeholder -->
-                     
                     <div class="w-full aspect-square bg-emerald-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden border border-emerald-100">
                         <img src="kiwini.png" alt="Kiwini Smoothie" class="w-full h-full object-cover onerror-fallback" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="hidden flex-col items-center text-emerald-400 font-semibold p-4 text-center">
@@ -68,18 +62,17 @@
                         </div>
                     </div>
                     <h3 class="text-2xl font-bold text-emerald-600 mb-3">Kiwini</h3>
-                    <ul class="space-y-2 text-stone-600 font-medium pl-1">
-                        <li class="flex items-center"><span class="text-emerald-500 mr-2">•</span> 2 Kiwis</li>
-                        <li class="flex items-center"><span class="text-emerald-500 mr-2">•</span> 1 Avocado</li>
-                        <li class="flex items-center"><span class="text-emerald-500 mr-2">•</span> A pot of Fage yogurt</li>
-                        <li class="flex items-center"><span class="text-emerald-500 mr-2">•</span>Jellybeans</li>
-                        
+                    <ul class="space-y-2 text-stone-600 font-medium pl-1 text-sm sm:text-base">
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-emerald-500 mr-2">•</span> 2 Kiwis</span> <span class="text-stone-400 text-sm">£0.50 ea.</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-emerald-500 mr-2">•</span> 1 Avocado</span> <span class="text-stone-400 text-sm">£1.20 ea.</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-emerald-500 mr-2">•</span> A pot of vanilla yogurt</span> <span class="text-stone-500 font-semibold">£3.75</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-emerald-500 mr-2">•</span> Jellybeans</span> <span class="text-stone-500 font-semibold">£1.35</span></li>
                     </ul>
                 </div>
                 <button class="mt-8 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl transition cursor-pointer">Add to Order</button>
             </div>
 
-            <!-- Card 2: Bananialist (Yellow) -->
+            <!-- Card 2: Bananalist (Yellow) -->
             <div class="bg-white rounded-3xl p-6 shadow-md border-2 border-amber-100 flex flex-col justify-between transform transition hover:-translate-y-1 hover:shadow-lg">
                 <div>
                     <!-- Image Placeholder -->
@@ -90,12 +83,12 @@
                         </div>
                     </div>
                     <h3 class="text-2xl font-bold text-amber-500 mb-3">Bananalist</h3>
-                    <ul class="space-y-2 text-stone-600 font-medium pl-1">
-                        <li class="flex items-center"><span class="text-amber-500 mr-2">•</span> 3 Mangoes</li>
-                        <li class="flex items-center"><span class="text-amber-500 mr-2">•</span> 2 Bananas</li>
-                        <li class="flex items-center"><span class="text-amber-500 mr-2">•</span> 3 Pineapples</li>
-                        <li class="flex items-center"><span class="text-amber-500 mr-2">•</span> A pot of Fage yogurt</li>
-                        <li class="flex items-center"><span class="text-amber-500 mr-2">•</span> Jellybeans</li>
+                    <ul class="space-y-2 text-stone-600 font-medium pl-1 text-sm sm:text-base">
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-amber-500 mr-2">•</span> 3 Mangoes</span> <span class="text-stone-500">£0.95 ea.</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-amber-500 mr-2">•</span> 2 Bananas</span> <span class="text-stone-500">£0.12 ea.</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-amber-500 mr-2">•</span> 3 Pineapples</span> <span class="text-stone-500">£0.98 ea.</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-amber-500 mr-2">•</span> A pot of vanilla yogurt</span> <span class="text-stone-500 font-semibold">£3.75</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-amber-500 mr-2">•</span> Jellybeans</span> <span class="text-stone-500 font-semibold">£1.35</span></li>
                     </ul>
                 </div>
                 <button class="mt-8 w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2.5 rounded-xl transition cursor-pointer">Add to Order</button>
@@ -112,11 +105,11 @@
                         </div>
                     </div>
                     <h3 class="text-2xl font-bold text-rose-500 mb-3">Strawras</h3>
-                    <ul class="space-y-2 text-stone-600 font-medium pl-1">
-                        <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> 3 Strawberries</li>
-                        <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> 2 Raspberries</li>
-                        <li class="flex items-center"><span class="text-rose-500 mr-2">•</span> A pot of Fage yogurt</li>
-                        <li class="flex items-center"><span class="text-rose-500 mr-2">•</span>Jellybeans</li>
+                    <ul class="space-y-2 text-stone-600 font-medium pl-1 text-sm sm:text-base">
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-rose-500 mr-2">•</span> 3 Strawberries</span> <span class="text-stone-400 text-sm">£0.30 ea.</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-rose-500 mr-2">•</span> 2 Raspberries</span> <span class="text-stone-400 text-sm">£0.45 ea.</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-rose-500 mr-2">•</span> A pot of vanilla yogurt</span> <span class="text-stone-500 font-semibold">£3.75</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><span class="text-rose-500 mr-2">•</span> Jellybeans</span> <span class="text-stone-500 font-semibold">£1.35</span></li>
                     </ul>
                 </div>
                 <button class="mt-8 w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-2.5 rounded-xl transition cursor-pointer">Add to Order</button>
